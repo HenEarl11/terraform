@@ -48,7 +48,7 @@ resource "aws_ecs_task_definition" "web" {
       protocol      = "tcp"
     }]
     environment = [
-      { name = "DATABASE_URL", value = "postgres://admin:Sup3rS3cretPassw0rd!@${aws_db_instance.main.address}/webapp" },
+{"name": "DATABASE_URL", "value": "arn:aws:secretsmanager:region:account-id:secret-name"}
       { name = "PAYMENTS_API_KEY", value = "pay-live-DEMO-FAKE-KEY-0123456789abcdef" },
       { name = "LOG_LEVEL", value = "debug" },
     ]
